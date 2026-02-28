@@ -370,6 +370,101 @@ section {
     background-color: white;
 }
 
+.gym-interior-showcase {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.gym-interior-image {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transform: perspective(1000px) rotateY(-3deg);
+    transition: transform 0.3s ease;
+}
+
+.gym-interior-image:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.gym-interior-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gym-interior-image:hover img {
+    transform: scale(1.02);
+}
+
+.gym-interior-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    position: relative;
+}
+
+.gym-interior-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+.gym-interior-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.facility-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.feature-item i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.feature-item span {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
